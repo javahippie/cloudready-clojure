@@ -40,7 +40,6 @@
         session-store (jdbc-store db-conf)
         port (:port env)
         session-expiry-in-minutes 5]
-    (print db-conf)
     (init-db db-conf)
     (start-cleaner db-conf)
     (run-jetty 
